@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Salto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo básico */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: #000;
+        }
+
+        /* Encabezado */
+        header {
+            background: url('tu-imagen-de-fondo.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: rgb(149, 23, 183);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 1.2em;
+            z-index: 2;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin: 10px 0;
+        }
+
+        /* Botón */
+        .button {
+            padding: 10px 20px;
+            background-color: rgb(149, 23, 183);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 2;
+            margin-top: 20px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:hover {
+            background-color: #270836;
+            transform: scale(1.05);
+        }
+
+        /* Sección de Información */
+        .info-section {
+            padding: 50px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            color: #000;
+        }
+
+        .contenedor {
+            background-color: transparent;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contenedor img {
+            max-width: 150px; /* Tamaño del logo */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="contenedor">
+            <img src="PNG_Resources/CAT.png" alt="Logo de la página">
+        </div>
+        <h1>Bienvenido a mi página</h1>
+       
+        <p>Descubre contenido interesante.</p>
+        <a href="#info" class="button">Da click para avanzar</a>
+    </header>
+
+    <div id="info" class="info-section">
+        <h2>En esta página encontrarás información útil para el cuidado de tu gato.</h2>
+        <p>Aquí puedes agregar el contenido que desees mostrar al hacer click en el botón.</p>
+        <p>¡Utiliza este espacio para presentar información importante!</p>
+    </div>
+
+    <div id="info" class="info-section">
+        
+    </div>
+
+</body>
+
+</html>
